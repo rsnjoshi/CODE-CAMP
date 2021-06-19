@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code camp</title>
+</head>
+<body>
+    <!-- <h1>I am programmer</h1>
+    <h2>I am programmer</h2>
+    <h3>I am programmer</h3>
+    <h4>I am programmer</h4>
+    <h5>I am programmer</h5>
+    <h6>I am programmer</h6>
+    <a href="https://google.com" target="_blank">google</a>
+    <p>my name is roshan. i am a programmer and i love to program dajflkdjfljasd <br>dfajlf
+        adkfadjfjalksdjfladsadjaksd fjksdjf la
+    </p>
+    
+    <pre>jalskdjklf sd sdfkja sdf dajflkdjfljasdakdsf
+        sadjfkjas fksjkldjf adkfadjfjalksdjfladsadjaksd
+        akldjflkalf
+    </pre> -->
+
+    <!-- <pre>
+        <b>askdlfj</b> aksd <i>kaksd</i> fkjas <em>dlfkasj</em> dfkla <mark>sdlkfjlkaj</mark> dfj kasf
+        kaljf <sub>kajsdlk</sub> jf <sup>askdlfjajdklsf</sup> klas fkldsjf
+    </pre> -->
+
+    <!-- <img src="https://images-na.ssl-images-amazon.com/images/I/71TBg4r1oNL._A" alt="this is keyboard" width="500" height="250"> -->
+    <!-- <div class="header" id="root" style="background-color: #754475; width: 500px; height: 250px;">
+        <p>hello world</p>
+    </div> -->
+
+    <!-- <form action="#" method="POST">
+        <input type="number" name="age" id="" class="">
+        <br>
+        <input type="text" name="name" id="" class="">
+        <br>
+        <input type="password" name="password" id="">
+        <br>
+        <input type="range" name="weight" id="">
+        <br>
+        <input type="radio" name="male">
+        <br>
+        <input type="radio" name="female">
+        <br>
+        <input type="checkbox" name="valid">
+        <br>
+        <button type="submit">submit</button>
+    </form> -->
+    <!-- <input type="color">
+     -->
+     <!-- <video controls width="500" height="250">
+         <source src="./../file_example_MP4_1280_10MG.mp4" type="video/mp4">
+     </video>
+     <audio controls>
+         <source src="./../file_example_MP3_1MG.mp3" type="audio/mp3">
+     </audio> -->
+     <button id="disco" onclick="discomode(event)">Disco</button>
+     <br>
+     <iframe src="https://www.youtube.com/embed/BpeFXed4K6I?controls=1" width="500" height="250" frameborder="0"></iframe>
+</body>
+<script>
+    const button = document.getElementById('disco')
+    const colorArray = ['red', 'green', 'yellow', 'green', 'white']
+    let flag = false
+    let timer
+    let counter = 0
+
+    function discomode(e) {
+        if(!flag) {
+            timer = setInterval(() => {
+                if (counter > 4) counter = 0
+                const target = document.getElementsByTagName('body')
+                target[0].style.backgroundColor = colorArray[counter]
+                counter += 1
+            }, 100)
+            flag = true
+        } else {
+            clearInterval(timer)
+            flag = false
+        }
+    }
+</script>
+</html>
