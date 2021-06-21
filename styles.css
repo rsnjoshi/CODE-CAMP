@@ -1,0 +1,60 @@
+body {
+    margin: 0px;
+    background-image: url('./images/sunset.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 930px;
+}
+
+header, footer {
+    background-color: rgba(10, 37, 207, 0.5);
+    height: 45px;
+}
+
+.header-logo {
+    display: inline;
+    padding: 15px;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    line-height: 2.2;
+}
+
+nav {
+    float: right;
+    height: 100%;
+}
+
+nav span {
+    display: inline;
+    padding: 15px;
+    line-height: 2.7;
+    height: 100%;
+
+}
+
+nav span a {
+    text-decoration: none;
+    color: white
+}
+
+nav span:hover {
+    background-color: rgba(4, 10, 54, 0.7);
+}
+
+.active_nav {
+    background-color: rgba(4, 10, 54, 0.7);
+}
+
+#root {
+    height: 880px;
+}
+
+footer > p {
+    color: white;
+    font-family: ui-serif;
+    text-align: center;
+    line-height: 2.5;
+    margin: 0px;
+    font-size: large;
+}
