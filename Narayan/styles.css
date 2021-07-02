@@ -1,0 +1,158 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    height: 930px;
+}
+
+hr{
+    background-color: rgba(247, 230, 4,1);
+    margin:0px;
+    height: 5px;
+    width: 100%;
+}
+
+header, footer {
+    background-color: #fff;
+    height: 63px;
+}
+
+.header-logo {
+    padding-left: 83px;
+    padding-top: 8px;
+}
+
+nav {
+    float: right;
+    height: 57px;
+    font-size:20px;
+}
+
+nav a {
+    display: inline;
+    padding: 17px;
+    line-height: 2.8;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+        color: rgba(247, 230, 4,1);
+}
+
+footer > p {
+    text-align: center;
+    margin: 0px;
+    font-size: 17px;
+    line-height: 3.9;
+}
+
+#con{
+    background-color: black;
+    color: rgba(247, 230, 4,1);
+}
+   
+#con:hover{
+    color: white;
+}
+
+#bg{
+    background-image: url(./room.webp);
+    height: 795px;
+}
+
+.bg-1{
+    background-color: rgba(18, 7, 46, 0.952);
+    height: 100%;
+    width: 42%;
+    position: relative;
+    left: 13%;
+    display: inline-block;
+}
+
+.quot{
+    color: #ccd2e1;
+    font-size: 63px;
+    padding-top: 170px;
+    padding-left: 50px;
+}
+
+.quot-1{
+    color: rgba(247, 230, 4,1);
+    font-size: 63px;
+    padding-left: 50px;
+}
+
+.quot-2{
+    color: #ccd2e1;
+    font-size: 63px;
+    padding-left: 50px;
+}
+
+.quot-3{
+    color: #ccd2e1;
+    font-size: 17px;
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+.browse{
+    margin-left: 50px;
+    background-color: rgba(18, 7, 46, 0.952);
+    border: 1px solid rgba(247, 230, 4,1);
+    font-size:larger;
+}
+
+.browse>a{
+    text-decoration: none;
+    color:rgba(247, 230, 4,1);
+    padding: 25px;
+    line-height: 3.5;
+}
+
+.bg-2{
+    display: inline-block;
+    position: realtive;
+    left: 55%;
+    background-color:rgba(247, 230, 4,1);
+    width: 7;
+    height: 80%;
+    transform: rotate(-90deg);
+    font-size: 30px;
+}
+
+.blank{
+    height: 101px;
+}
+
+.stext{
+    text-align: center;
+    font-size: 15px;
+}
+
+.btext{
+    position: relative;
+    left: 28%;
+    font-size: 48px;
+    width: 45%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mtext{
+    position: relative;
+    left: 28%;
+    font-size: 23px;
+    width: 45%;
+    text-align: center;
+    font-family: -webkit-pictograp;
+}
+
+footer>span{
+        content: "\1F49B";
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(247, 230, 4,1);
+}
