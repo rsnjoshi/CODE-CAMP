@@ -1,22 +1,27 @@
 .null{
     height: 7px;
-    background-color: yellow;
+    background-color: rgb(209, 209, 12);
 }
 body{
     margin: 0px;
 }
 .zero{
     height: 72px;
-    background-color:turquoise;
+    background-color:white;
 }
-#one{
-    margin-left: 100px;
-display: inline;
+.one{
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    display: inline;
+    margin-inline: 110px;
+    margin-top: 14px;
 }
 .two{
-    line-height:3.1;
-    font-size: 21px;
+    line-height:3.3;
+    font-size: 19px;
 float: right;
+font-weight:500;
 }
 nav span{
     padding: 24px;
@@ -25,11 +30,12 @@ nav span{
     color:goldenrod;
 }
 .ref{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     color:black;
 }
 .call{
-    background-color: blue;
+    background-color: #07022c;
 }
 .four{
     line-height:3.45;
@@ -44,9 +50,112 @@ float: right;
     color: white;
 }
 .image{
-    height: 750px;
-    width: 1349px;
+    background: url("https://preview.colorlib.com/theme/homofy/assets/img/hero/h1_hero1.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+  
+    display: flex;
+    flex-direction: row;
 }
+.blue{
+    border: solid ;
+    border-color: #06012e;
+    width: 625px;
+    height:800px;
+    background-color:#06012e;
+    position: relative;
+    left: 100px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    border-width: 0px;
+    
+}
+
+.align1{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 48px;
+    margin-top: 200px;
+    font-size: 65px;
+    color: white;
+}
+.align2{
+    margin-left: 48px;
+    font-size: 65px;
+    color: goldenrod;
+}
+.align3{
+    margin-left: 48px;
+    font-size: 65px;
+    color: white;
+}
+.align4{
+    margin-top: 10px;
+    margin-left: 48px;
+    color:linen;
+    font-size: 23px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+.align5{
+    margin-left: 48px;
+    color:linen;
+    font-size: 23px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+.align6{
+    margin-left: 48px;
+    color:linen;
+    font-size: 23px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+#play{
+    font-size: 33px;
+}
+.yellow{
+    border: solid;
+    border-width: 0px;
+    background-color: rgb(190, 152, 26);
+    width: 315px;
+    height: 95px;
+    position: relative;
+    margin-top: 595px;
+    margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+  transform: rotate(-90deg);
+  font-size: 25px;
+}
+.yellow1{
+    transform: rotate(+360deg);
+    margin-left: 35px;
+    line-height: 3.4;
+    font-weight: 300;
+}
+.button {
+     border: solid;
+     border-width: 1.8px;
+     border-color: gold;
+     width: 232px;
+     height: 65px;
+     margin-top: 40px;
+     margin-left: 48px;
+  }
+  .button1{
+      font-size: 20px;
+      color: gold;
+      font-weight: 600;
+      margin-left: 29px;
+      line-height: 2.9;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .button:hover{
+      background-color: #050120;
+  }
+  
 .content{
 margin: 90px;
 display: flex;
@@ -86,25 +195,14 @@ margin-bottom: 50px;
     margin: 0px;
 }
 .box1{
-  background-color: lightgrey;
-  width: 350px;
-  border: 2px solid rgb(121, 121, 124);
+  width: 370px;
+  border: 1px solid rgb(165, 165, 189);
     display: flex;
     flex-direction: column;
-    box-shadow: 10px 10px;
-    border-radius: 8px;
     height: 510px;
-    box-shadow: rgba(0, 0, 0, 0.5);
 }
-.box1:hover{animation-name: example3;
-    animation-duration: 0.5s;
-  }
-  @keyframes example3{
-    from{width: 350px; height: 510px;}
-    to{width: 365px; height: 525px; } 
-  }
 .box11{
-    width: 350px;
+    width: 370px;
     height: 260px;
     margin-bottom: 10px;
 }
@@ -128,24 +226,14 @@ color:  #424255 ;
 font-family: Arial, Helvetica, sans-serif;
 }
 .box2{
-    background-color: lightgrey;
-    width: 350px;
-    border: 2px solid rgb(121, 121, 124);
+    width: 370px;
+    border: 1px solid rgb(165, 165, 189);
       display: flex;
       flex-direction: column;
-      box-shadow: 10px 10px;
-      border-radius: 8px;
       height: 510px;
   }
-  .box2:hover{animation-name: example2;
-    animation-duration: 0.5s;
-  }
-  @keyframes example2{
-    from{width: 350px; height: 510px;}
-    to{width: 365px; height: 525px; } 
-  }
   .box21{
-      width: 350px;
+      width: 370px;
       height: 260px;
       margin-bottom: 10px;
   }
@@ -169,24 +257,14 @@ font-family: Arial, Helvetica, sans-serif;
   font-family: Arial, Helvetica, sans-serif;
   }
   .box3{
-    background-color: lightgrey;
-    width: 350px;
-    border: 2px solid rgb(121, 121, 124);
-      display: flex;
-      flex-direction: column;
-      box-shadow: 10px 10px;
-      border-radius: 8px;
-      height: 510px;
-  }
-  .box3:hover{animation-name: example1;
-    animation-duration: 0.5s;
-  }
-  @keyframes example1{
-    from{width: 350px; height: 510px;}
-    to{width: 365px; height: 525px; } 
+    width: 370px;
+  border: 1px solid rgb(165, 165, 189);
+    display: flex;
+    flex-direction: column;
+    height: 510px;
   }
   .box31{
-      width: 350px;
+      width: 370px;
       height: 260px;
       margin-bottom: 10px;
   }
@@ -211,8 +289,7 @@ font-family: Arial, Helvetica, sans-serif;
   }
   footer{
       margin-top: 50px;
-      height: 35px;
-      background-color: turquoise;
+      height: 50px;
       text-align: center;
   }
   .foot{
