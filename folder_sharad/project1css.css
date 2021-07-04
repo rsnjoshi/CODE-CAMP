@@ -199,7 +199,7 @@ margin-bottom: 50px;
   border: 1px solid rgb(165, 165, 189);
     display: flex;
     flex-direction: column;
-    height: 510px;
+    height: 550px;
 }
 .box11{
     width: 370px;
@@ -218,19 +218,42 @@ margin-bottom: 50px;
 .box14{
     margin-bottom: 1px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 27px;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
 }
 .box15{
-font-size: 20px;
-color:  #424255 ;
-font-family: Arial, Helvetica, sans-serif;
+    font-size: 18.5px;
+    color:  #7d7d7e ;
+     font-family: Arial, Helvetica, sans-serif;
+}
+.box16{
+    border: solid;
+    position: relative;
+    border-width: 1px;
+    width: 370px;
+    height: 100px;
+    border-color: rgb(165, 165, 189);
+    margin-left: -1px;
+}
+.box17{
+    margin-left: 18px;
+    margin-top: 10px;
+    color: rgb(104, 100, 100);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#box171{
+    margin-left: 30px;
+}
+#box172{
+    margin-left: 30px;
 }
 .box2{
     width: 370px;
-    border: 1px solid rgb(165, 165, 189);
-      display: flex;
-      flex-direction: column;
-      height: 510px;
+  border: 1px solid rgb(165, 165, 189);
+    display: flex;
+    flex-direction: column;
+    height: 550px;
   }
   .box21{
       width: 370px;
@@ -249,19 +272,42 @@ font-family: Arial, Helvetica, sans-serif;
   .box24{
       margin-bottom: 1px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 27px;
+      font-size: 25px;
+      color: rgb(78, 78, 78);
   }
   .box25{
-  font-size: 20px;
-  color:  #424255 ;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18.5px;
+  color:  #7d7d7e ;
+   font-family: Arial, Helvetica, sans-serif;
   }
+  .box26{
+    border: solid;
+    position: relative;
+    border-width: 1px;
+    width: 370px;
+    height: 100px;
+    border-color: rgb(165, 165, 189);
+    margin-left: -1px;
+}
+.box27{
+    margin-left: 18px;
+    margin-top: 10px;
+    color: rgb(104, 100, 100);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#box271{
+    margin-left: 30px;
+}
+#box272{
+    margin-left: 30px;
+}
   .box3{
     width: 370px;
-  border: 1px solid rgb(165, 165, 189);
-    display: flex;
-    flex-direction: column;
-    height: 510px;
+    border: 1px solid rgb(165, 165, 189);
+      display: flex;
+      flex-direction: column;
+      height: 550px;
   }
   .box31{
       width: 370px;
@@ -280,13 +326,36 @@ font-family: Arial, Helvetica, sans-serif;
   .box34{
       margin-bottom: 1px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 27px;
+      font-size: 25px;
+      color: rgb(78, 78, 78);
   }
   .box35{
-  font-size: 20px;
-  color:  #424255 ;
-  font-family: Arial, Helvetica, sans-serif;
+    font-size: 18.5px;
+    color:  #7d7d7e ;
+     font-family: Arial, Helvetica, sans-serif;
   }
+  .box36{
+    border: solid;
+    position: relative;
+    border-width: 1px;
+    width: 370px;
+    height: 100px;
+    border-color: rgb(165, 165, 189);
+    margin-left: -1px;
+}
+.box37{
+    margin-left: 18px;
+    margin-top: 10px;
+    color: rgb(104, 100, 100);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#box371{
+    margin-left: 30px;
+}
+#box372{
+    margin-left: 30px;
+}
   footer{
       margin-top: 50px;
       height: 50px;
