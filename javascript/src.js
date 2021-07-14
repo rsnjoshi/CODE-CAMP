@@ -169,4 +169,109 @@
 // }
 // evenOdd(somenumer)
 
+// (() => {
+//     console.log('hello world')
+// })()
+
+
+// const a = 12
+// const b = '12'
+
+// if (a === b) console.log('true')
+
+
+// function a() {
+//     var x = 20
+//     function b() {
+//         var y = 30
+//         console.log('x from b => ', x)
+//         console.log('y from b=> ', y)
+//         console.log('z from b => ', z)
+
+//         function c() {
+//             var z = 40
+//             console.log('x from c => ', x)
+//             console.log('y from c=> ', y)
+//             console.log('z from c => ', z)
+//         }
+//         c()
+//     }
+//     b()
+//     console.log('x from a => ', x)
+//     console.log('y from a => ', y)
+//     console.log('z from a => ', z)
+
+// }
+
+// a()
+// b()
+
+// var primeCount = 0
+
+// function primeNumber(n) {
+//     if (n == 0) return false
+//     if ( n == 1 || n ==2 ) return true
+//     for(let i = 2; i < n; i++) {
+//         if (n % i == 0) return false
+//     }
+//     return true
+// }
+
+// function findPrime(n) {
+//     if (n == 0) return primeCount
+//     const isPrime = primeNumber(n)
+//     if (isPrime) primeCount += 1
+//     return findPrime(n-1)
+// }
+
+// console.log(findPrime(1000))
+// findPrime(1000) findPrime(999) findPrime(998) ........ findPrime(0)
+
+
+// Array
+
+// const array1 = []
+// array1.push(12)
+// array1.push(13)
+// array1.push(1)
+// array1.push(129)
+// console.log(array1)
+// var pop
+// pop = array1.pop()
+// pop = array1.pop()
+
+// console.log(pop)
+// console.log(array1)
+
+const array2 = ['carrot', 'cauli', 'tomato', 'tomato', 'potato', 'pumpkin']
+
+console.log(array2.indexOf('tomato'))
+console.log(array2.lastIndexOf('tomato'))
+console.log(array2.length)
+console.log(array2.join(''))
+// array2.shift()
+array2.unshift('brinjal')
+console.log(array2.shift())
+console.log(array2)
+console.log(array2.toString())
+
+const st = 'i am roshan joshi'
+console.log(st.split(' '))
+
+array2.splice(1, 0, 'ladies finger')
+console.log(array2)
+console.log(array2[3])
+
+for(i in array2) {
+    console.log(i)
+}
+
+array2.forEach((item) => {
+    console.log(item)
+})
+
+
+for(let i = 0; i < array2.length; i++) {
+    console.log(array2[i])
+}
 
