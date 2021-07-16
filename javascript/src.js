@@ -243,35 +243,263 @@
 // console.log(pop)
 // console.log(array1)
 
-const array2 = ['carrot', 'cauli', 'tomato', 'tomato', 'potato', 'pumpkin']
+// const array2 = ['carrot', 'cauli', 'tomato', 'tomato', 'potato', 'pumpkin']
 
-console.log(array2.indexOf('tomato'))
-console.log(array2.lastIndexOf('tomato'))
-console.log(array2.length)
-console.log(array2.join(''))
-// array2.shift()
-array2.unshift('brinjal')
-console.log(array2.shift())
-console.log(array2)
-console.log(array2.toString())
+// console.log(array2.indexOf('tomato'))
+// console.log(array2.lastIndexOf('tomato'))
+// console.log(array2.length)
+// console.log(array2.join(''))
+// // array2.shift()
+// array2.unshift('brinjal')
+// console.log(array2.shift())
+// console.log(array2)
+// console.log(array2.toString())
 
-const st = 'i am roshan joshi'
-console.log(st.split(' '))
+// const st = 'i am roshan joshi'
+// console.log(st.split(' '))
 
-array2.splice(1, 0, 'ladies finger')
-console.log(array2)
-console.log(array2[3])
+// array2.splice(1, 0, 'ladies finger')
+// console.log(array2)
+// console.log(array2[3])
 
-for(i in array2) {
-    console.log(i)
+// for(i in array2) {
+//     console.log(i)
+// }
+
+// array2.forEach((item) => {
+//     console.log(item)
+// })
+
+
+// for(let i = 0; i < array2.length; i++) {
+//     console.log(array2[i])
+// }
+
+
+
+// objects are containers for named values and methods or properties with respective
+
+// const array1 = {}
+
+// array1.name = 'roshan'
+// array1.age = 25
+// array1.lastName = 'joshi'
+// array1['gender'] = 'male'
+
+// console.log(array1)
+
+
+// const car1 = {
+//     name: 'ferrari',
+//     price: '10M',
+//     colors: ['red', 'green', 'white', 'wineRed'],
+//     manufactureInfo: {
+//         manufatureDate: '2017',
+//         batchId: '12AFV8',
+//         engine: 'V8',
+//     },
+//     collectData: function() {
+//         return this.name + ' ' + this.price + ' ' + this.manufactureInfo.engine
+//     },
+//     display: function() {
+//         console.log(this)
+//     }
+// }
+
+// console.log(car1.colors)
+// console.log(car1.price)
+// console.log(car1.manufactureInfo.batchId)
+
+// const information = car1.collectData()
+// console.log(information)
+// car1.display()
+
+
+// console.log(Object.keys(car1.manufactureInfo))
+// console.log(Object.values(car1))
+// // Object.freeze(car1)
+// car1.seats = 2
+// // console.log(car1)
+
+// const electronics = {
+//     headlights: 'led',
+//     transmission: 7,
+//     powerStaring: true,
+//     price: '222220M',
+// }
+
+// Object.assign(car1, electronics)
+// console.log(car1)
+
+
+// const Phone = function(name, color, resolution, price) {
+//     this.name = name
+//     this.color = color
+//     this.resolution = resolution
+//     this.price = price
+// }
+
+// Phone.prototype.isSmart = true
+
+// const phone1 = new Phone('galaxy', 'black', '4k', 10000)
+// const phone2 = new Phone('y8', 'red', '1080', 100000)
+// const phone3 = new Phone('s9', 'white', '8k', 45000)
+// const phone4 = new Phone('XR', 'ceramic', '4k', 120000)
+// const phone5 = new Phone('op7', 'pink', '4k', 90000)
+
+// console.log(phone1)
+// console.log(phone2)
+// console.log(phone3)
+// console.log(phone4)
+// console.log(phone5)
+
+// console.log(phone3.isSmart)
+// Array.prototype.reverse = function() {
+//     console.log('hacked')
+// }
+// const a = [1,2,3,4]
+// a.reverse()
+// console.log(a)
+
+// function reverse(item) {
+//     item.reverse()
+// }
+
+// const array4 = [1,2,3,4,5]
+
+// reverse(array4)
+
+// console.log(array4)
+
+
+// const arr = [{
+//     name: 'nameA',
+//     score1: 12,
+//     score2: 13,
+// },{
+//     name: 'nameB',
+//     score1: 45,
+//     score2: 13,
+// },{
+//     name: 'nameC',
+//     score1: 455,
+//     score2: 213,
+// }]
+
+// let result = 0
+
+// arr.forEach((item)=>{
+//     result += item.score1
+// })
+
+// const mapped = arr.map((item)=>{
+//     const buffer_obj = {...item}
+//     const sum = item.score1 + item.score2
+//     buffer_obj.sum = sum
+//     return buffer_obj
+// })
+
+// console.log(mapped)
+// console.log(arr)
+
+
+
+// setTimeout(()=>{
+//     console.log('i am time consuming task')
+// }, 2000)
+
+// setInterval(()=>{
+//     console.log('i run in certain interval')
+// }, 1000)
+
+// console.log('hello')
+
+// let function1 = function(var1, var2, cb) {
+//     setTimeout(()=>{
+//         if(typeof(var1) === 'number' && typeof(var2) === 'number') {
+//             const result = var1 + var2
+//             cb(false, result)
+//         } else {
+//             cb('something went wrong', false)
+//         }
+        
+//     }, 4000)
+// }
+
+
+// function1(32, 42, (err, data) => {
+//     if (err){
+//         console.log(err)
+//         console.log(data)
+//     } else {
+//         console.log(data)
+//     }
+// })
+
+// console.log('i am running')
+
+
+//license process story
+
+function applyForm(name, age, callback) {
+    setTimeout(()=>{
+        const applicant_form = {}
+        applicant_form.name = name
+        applicant_form.age = age
+        applicant_form.accepted = true
+        callback(false, applicant_form)
+    }, 5000)
 }
 
-array2.forEach((item) => {
-    console.log(item)
+function giveWrittenExam(callback) {
+    setTimeout(() => {
+        callback(false, 'passed written exam')
+    }, 3000)
+}
+
+function trialExam(attempt, callback){
+    setTimeout(() => {
+        if(attempt.length < 3) {
+            attempt.push(1)
+            callback('trial exam failed', false, attempt)
+        } else {
+            callback(false, 'trial exam passed', attempt)
+        }
+    }, 3000)
+}
+
+function trialCallBack(err, data, attempt) {
+    if(err) {
+        console.log(err)
+        trialExam(attempt, trialCallBack)
+    } else {
+        console.log(data)
+        clearInterval(timer)
+    }
+}
+
+applyForm('sharad kafle', 25, (err, data) => {
+    if(err) {
+        console.log(err)
+    } else {
+        console.log(data)
+        console.log('form approved getting ready for written exam')
+        giveWrittenExam((err, data) => {
+            if(err) {
+                console.log(err)
+            } else {
+                console.log(data)
+                console.log('written exam complete, getting ready for trial')
+                const attempt = [1]
+                trialExam(attempt, trialCallBack)
+            }
+        })
+
+    }
 })
 
-
-for(let i = 0; i < array2.length; i++) {
-    console.log(array2[i])
-}
-
+var count = 0
+var timer = setInterval(() => {
+    count += 1
+    console.log('trial practice ', count)
+}, 200)
