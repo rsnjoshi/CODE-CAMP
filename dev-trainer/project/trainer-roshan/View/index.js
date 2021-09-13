@@ -4,7 +4,7 @@ export default class View {
         this.options = options || 'null'
         this.$el = null
         this.template = this.templateFunction()
-        this.initialize()
+        this.initialize(data, options)
     }
     initialize(data, options) {}
     getAttributes() {
