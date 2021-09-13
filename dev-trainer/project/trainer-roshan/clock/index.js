@@ -81,6 +81,7 @@ export default class Clock extends View {
     }
 
     start() {
+        if (this.oscillator) return
         this.oscillator = setInterval(this.update.bind(this), 1000)
     }
 
