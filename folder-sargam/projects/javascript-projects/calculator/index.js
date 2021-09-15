@@ -1,59 +1,59 @@
-import View from '../View/index.js'
-import template from './template.js'
+import View from "../View/index.js";
+import template from "./template.js";
 
 export default class Calculator extends View {
     initialize(data, option) {
-        this.currentValue = '0'
-        this.accumulator = 0
-        this.operator = null
-        this.previousOperator = null
-        this.finalValue = 0
+        this.currentValue = "0";
+        this.accumulator = 0;
+        this.operator = null;
+        this.previousOperator = null;
+        this.finalValue = 0;
     }
 
     setDomEvents() {
         return {
-            '.calculator__body-key click': this.updateCalculator.bind(this)
-        }
+            ".calculator__body-key click": this.updateCalculator.bind(this),
+        };
     }
 
     templateFunction() {
-        return template
+        return template;
     }
 
     getAttributes() {
         return {
-            class: 'calculator__frame',
-        }
+            class: "calculator__frame",
+        };
     }
 
     onBeforeRender() {
-        console.log('rendering......')
+        console.log("rendering......");
     }
 
     onRender() {
-        console.log('rendered successfully')
+        console.log("rendered successfully");
     }
 
     hasOperatorChanged(operator) {
-        return this.operator !== operator
+        return this.operator !== operator;
     }
 
-    updateCalculator(event){
-        const action = Object.keys(event.target.dataset)[0]
-        const value = Object.values(event.target.dataset)[0]
-        
-        switch(action) {
-            case 'value':
-                this.handleValue(value)
+    updateCalculator(event) {
+        const action = Object.keys(event.target.dataset)[0];
+        const value = Object.values(event.target.dataset)[0];
+
+        switch (action) {
+            case "value":
+                this.handleValue(value);
                 break;
-            case 'action':
-                this.handleAction(value)
+            case "action":
+                this.handleAction(value);
                 break;
-            case 'prefix':
-                this.handleValue('.')
+            case "prefix":
+                this.handleValue(".");
                 break;
-            case 'operator':
-                this.handleOperator(value)
+            case "operator":
+                this.handleOperator(value);
                 break;
             default:
                 break;
@@ -61,115 +61,125 @@ export default class Calculator extends View {
     }
 
     handleValue(value) {
-        if (value === '.' && this.currentValue.split('').indexOf('.') !== -1) return
+        if (value === "." && this.currentValue.split("").indexOf(".") !== -1)
+            return;
         if (this.operator) {
-            this.accumulator = +this.currentValue
-            this.currentValue = '0'
-            this.previousOperator = this.operator
-            this.operator = null
+            this.accumulator = +this.currentValue;
+            this.currentValue = "0";
+            this.previousOperator = this.operator;
+            this.operator = null;
         }
-        if (this.currentValue.length >= 20) return
-        if (this.currentValue !== '0') this.currentValue += value
-        else this.currentValue = value
-        this.refreshDisplay(this.currentValue)
+        if (this.currentValue.length >= 20) return;
+        if (this.currentValue !== "0") this.currentValue += value;
+        else this.currentValue = value;
+        this.refreshDisplay(this.currentValue);
     }
 
     handleOperator(operator) {
-        if (this.hasOperatorChanged(operator)){
+        if (this.hasOperatorChanged(operator)) {
             if (this.previousOperator) {
-                this.calculateValue()
-                this.previousOperator = null
+                this.calculateValue();
+                this.previousOperator = null;
             }
-            this.operator = operator
+            this.operator = operator;
         }
-
     }
 
     handleAction(action) {
-        switch(action) {
-            case 'clear':
-                this.hardReset()
-                break
-            case 'equals':
-                this.finalCalculation()
-                break
-            case 'pop':
-                this.clearOnce()
+        switch (action) {
+            case "clear":
+                this.hardReset();
+                break;
+            case "equals":
+                this.finalCalculation();
+                break;
+            case "pop":
+                this.clearOnce();
             default:
-                break
+                break;
         }
-
     }
 
     refreshDisplay(text) {
-        const display = this.$el.querySelector(".calculator__display-output")
-        display.textContent = ''
+        const display = this.$el.querySelector(".calculator__display-output");
+        display.textContent = "";
         setTimeout(() => {
-            display.textContent = text
-        }, 50)
+            display.textContent = text;
+        }, 50);
     }
 
     calculateValue() {
-        switch(this.previousOperator) {
-            case 'add':
-                this.accumulator = this.round(this.accumulator += +this.currentValue, 2)
-                break
-            case 'subtract':
-                this.accumulator = this.round(this.accumulator -= +this.currentValue, 2)
-                break
-            case 'multiply':
-                this.accumulator = this.round(this.accumulator *= +this.currentValue, 2)
-                break
-            case 'divide':
-                this.accumulator = this.round(this.accumulator /= +this.currentValue, 2)
-                break
+        switch (this.previousOperator) {
+            case "add":
+                this.accumulator = this.round(
+                    (this.accumulator += +this.currentValue),
+                    2
+                );
+                break;
+            case "subtract":
+                this.accumulator = this.round(
+                    (this.accumulator -= +this.currentValue),
+                    2
+                );
+                break;
+            case "multiply":
+                this.accumulator = this.round(
+                    (this.accumulator *= +this.currentValue),
+                    2
+                );
+                break;
+            case "divide":
+                this.accumulator = this.round(
+                    (this.accumulator /= +this.currentValue),
+                    2
+                );
+                break;
             default:
-                break
+                break;
         }
 
-        this.refreshDisplay(this.accumulator)
-        this.currentValue = this.accumulator
+        this.refreshDisplay(this.accumulator);
+        this.currentValue = this.accumulator;
     }
 
     finalCalculation() {
-        if(!this.previousOperator) {
-            this.refreshDisplay(this.currentValue)
-            return
+        if (!this.previousOperator) {
+            this.refreshDisplay(this.currentValue);
+            return;
         }
-        if(!this.finalValue) {
-            this.calculateValue()
-            this.finalValue = this.accumulator
-            this.reset()
-            this.currentValue = `${this.finalValue}`
-            this.refreshDisplay(this.currentValue)
+        if (!this.finalValue) {
+            this.calculateValue();
+            this.finalValue = this.accumulator;
+            this.reset();
+            this.currentValue = `${this.finalValue}`;
+            this.refreshDisplay(this.currentValue);
         }
     }
 
     hardReset() {
-        this.reset()
-        this.finalValue = 0
+        this.reset();
+        this.finalValue = 0;
     }
 
     reset() {
-        this.currentValue = '0'
-        this.accumulator = 0
-        this.operator = null
-        this.previousOperator = null
-        this.refreshDisplay(this.currentValue)
+        this.currentValue = "0";
+        this.accumulator = 0;
+        this.operator = null;
+        this.previousOperator = null;
+        this.refreshDisplay(this.currentValue);
     }
 
     clearOnce() {
-        let tempStr = this.currentValue.slice(0, -1)
-        this.currentValue = tempStr
-        this.refreshDisplay(this.currentValue)
+        let tempStr = this.currentValue.slice(0, -1);
+        this.currentValue = tempStr;
+        this.refreshDisplay(this.currentValue);
     }
 
     round(value, place) {
         if (value == null) {
-            return value
+            return value;
         }
-        const x = 10 ** place
-        return Math.round(value * x) / x
+        const x = 10 ** place;
+        return Math.round(value * x) / x;
     }
-
 }

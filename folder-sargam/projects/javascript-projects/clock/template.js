@@ -1,4 +1,4 @@
-export default options => (`
+export default (options) => `
     <div class="clock__frame">
         <div class="hour">10</div>
         <div class="tick">:</div>
@@ -11,5 +11,6 @@ export default options => (`
         <button class="reset">Reset</button>
         <button class="start">Start</button>
         <button class="stop">Stop</button>
+        <button class="current">Real Time</button>
     </div>
-`)
+`;
