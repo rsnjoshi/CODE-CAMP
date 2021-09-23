@@ -1,12 +1,6 @@
-#root {
-    width: 400px;
-    height: 300px;
-    background-color: blue;
-    #branch {
-        color: white
-    }
-    .click {
-        color: white;
-        background-color: black;
-    }
+body {
+    background-color: aqua;
 }
+
+@import '../../js/calculator/style.scss';
+@import '../../js/clock/style.scss';
