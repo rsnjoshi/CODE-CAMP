@@ -1,0 +1,55 @@
+.LoginView {
+    .form-container {
+        width: 50vw;
+        margin-left: 25vw;
+    }
+
+    .form {
+        border: 3px solid #f1f1f1;
+    }
+
+    .input_fields {
+        padding: 16px;
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    }
+
+    .error_fields {
+        .err {
+            color: red;
+            margin: 0px;
+            padding-left: 20px;
+            font-size: small;
+        }
+    }
+
+    .button_fields {
+        padding: 10px;
+        button {
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+        };
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .logIn {
+            background-color: rgb(41, 156, 41);
+        }
+
+        .signUp {
+            background-color: rgb(56, 99, 241);
+        }
+    }
+
+}

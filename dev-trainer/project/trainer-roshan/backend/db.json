@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "sharad",
+      "secondName": "kafle",
+      "username": "sharad23",
+      "password": "sharadcoder123",
+      "email": "sharad.kafle@gmail.com"
+    },
+    {
+      "firstName": "sargam",
+      "secondName": "paudel",
+      "username": "sargam24",
+      "password": "sargamcoder123",
+      "email": "sargam.poudel@gmail.com",
+      "id": 2
+    },
+    {
+      "firstName": "roshan",
+      "secondName": "joshi",
+      "username": "roshan25",
+      "password": "roshancoder123",
+      "email": "roshan.joshi@gmail.com",
+      "id": 4
+    }
+  ],
+  "questions": [
+    {
+      "question": "Which planet is the hottest planet in the solar system?",
+      "options": [
+        "mercury",
+        "jupiter",
+        "venus",
+        "earth"
+      ],
+      "answer": "venus",
+      "id": 1
+    },
+    {
+      "question": "What is the name of first element in periodic table?",
+      "options": [
+        "mercury",
+        "sodium",
+        "magnesium",
+        "hydrogen"
+      ],
+      "answer": "hydrogen",
+      "id": 2
+    }
+  ],
+  "progress": [
+      {
+          "id": 1,
+          "user": 2,
+          "alreadyPlayed": true,
+          "result": {
+              "total": 10,
+              "correct": 8
+          }
+      }
+  ]
+}

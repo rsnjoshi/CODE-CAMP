@@ -1,13 +1,16 @@
 import _ from 'lodash'
 import NotFound from '../404/index.js'
+import Login from '../../auth/login/index.js'
 
 export default class Router {
-    constructor(routes, el) {
+    constructor(routes, el, masterView) {
         this.routes = routes
         this.$el = el
         this.pathSegments = null
         this.tempRoutes = null
         this.currentPath = null
+        this.storage = window.localStorage
+        this.masterView = masterView
     }
 
     init() {
@@ -32,9 +35,19 @@ export default class Router {
             return
         }
         if(!('childRoute' in route)) {
-            const View = new route.view()
-            View.render(this.$el)
-            return
+            if (this.storage.getItem('loggedIn') === 'true') {
+                const View = new route.view()
+                View.render(this.$el)
+                return
+            } else {
+                (new Login({
+                    currentPath: this.currentPath,
+                    router: this,
+                    masterView: this.masterView,
+                })).render(this.$el)
+                return
+            }
+            
         } else {
             this.tempRoutes = _.cloneDeep(route.childRoute)
             this.drillRoute()

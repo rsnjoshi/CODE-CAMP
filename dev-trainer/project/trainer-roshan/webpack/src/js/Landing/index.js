@@ -8,6 +8,7 @@ import Router from '../services/router/router.js'
 export default class LandingView extends View {
     initialize(data, option) {
         this.appRouter = null
+        this.storage = window.localStorage
     }
 
     templateFunction() {
@@ -23,13 +24,14 @@ export default class LandingView extends View {
     setDomEvents() {
         return {
             '#home click': this.navigate.bind(this),
-            '#nested click': this.navigate.bind(this),
+            '#logout click': this.logout.bind(this),
             '#clock click': this.navigate.bind(this),
             '#calculator click': this.navigate.bind(this),
         }
     }
 
     onRender() {
+        if (this.storage.getItem('loggedIn') === 'true') this.header(true)
         const routerHook = this.$el.find('#childHook')
         const appRoutes = [
             {
@@ -54,7 +56,7 @@ export default class LandingView extends View {
                 ]
             },
         ]
-        this.appRouter = new Router(appRoutes, routerHook)
+        this.appRouter = new Router(appRoutes, routerHook, this)
         this.appRouter.init()
     }
 
@@ -63,5 +65,18 @@ export default class LandingView extends View {
         if (targetRoute === 'home') targetRoute = ''
         if (targetRoute === 'nested') targetRoute = 'clock/calculator'
         this.appRouter.navigate(`/${targetRoute}`)
+    }
+
+    header(state) {
+        this.$el.find('navbar').css({
+            display: state ? 'block' : 'none',
+        })
+    }
+
+    logout() {
+        this.storage.setItem('loggedIn', false)
+        this.storage.setItem('loggedInfo', undefined)
+        this.header(false)
+        this.appRouter.navigate('/')
     }
 }

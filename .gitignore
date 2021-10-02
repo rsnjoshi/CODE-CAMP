@@ -1,3 +1,4 @@
 .vscode/
 dev-trainer/project/trainer-roshan/webpack/node_modules
 dev-trainer/project/trainer-roshan/webpack/dist/*
+node_modules
